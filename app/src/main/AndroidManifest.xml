@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hxzk.customview">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:hardwareAccelerated="false">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 绘制知识点列表 -->
+        <activity android:name=".OnDrawActivity"/>
+        <!-- 绘制基础列表 -->
+        <activity android:name=".drawbase.DrawBaseActivity"/>
+        <!--绘制基础-画圆 -->
+        <activity android:name=".drawbase.DrawCircleActivity"/>
+        <!--绘制基础-自定义图像 -->
+        <activity android:name=".drawbase.DrawPathActivity"/>
+        <!--Paint详解-->
+        <activity android:name=".paint.PaintActivity"/>
+        <!--paint详解之颜色 -->
+        <activity android:name=".paint.ColorActivity"
+            android:hardwareAccelerated="false"/>
+    </application>
+
+</manifest>

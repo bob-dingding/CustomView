@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_drawbase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:text="绘制基础"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_paint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Paint详解"
+        app:layout_constraintEnd_toEndOf="@+id/btn_drawbase"
+        app:layout_constraintStart_toStartOf="@+id/btn_drawbase"
+        app:layout_constraintTop_toBottomOf="@+id/btn_drawbase" />
+
+    <Button
+        android:id="@+id/btn_drawtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="DrawText文字绘制"
+        app:layout_constraintEnd_toEndOf="@+id/btn_paint"
+        app:layout_constraintStart_toStartOf="@+id/btn_paint"
+        app:layout_constraintTop_toBottomOf="@+id/btn_paint" />
+
+    <Button
+        android:id="@+id/btn_clipAndmatrix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Canvas 对绘制的辅助 clipXXX() 和 Matrix"
+        app:layout_constraintEnd_toEndOf="@+id/btn_drawtext"
+        app:layout_constraintStart_toStartOf="@+id/btn_drawtext"
+        app:layout_constraintTop_toBottomOf="@+id/btn_drawtext" />
+
+    <Button
+        android:id="@+id/btn_draworder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=" 绘制顺序"
+        app:layout_constraintEnd_toEndOf="@+id/btn_clipAndmatrix"
+        app:layout_constraintStart_toStartOf="@+id/btn_clipAndmatrix"
+        app:layout_constraintTop_toBottomOf="@+id/btn_clipAndmatrix" />
+
+    <Button
+        android:id="@+id/btn_property"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="属性动画 Property Animation（上手篇）"
+        app:layout_constraintEnd_toEndOf="@+id/btn_draworder"
+        app:layout_constraintStart_toStartOf="@+id/btn_draworder"
+        app:layout_constraintTop_toBottomOf="@+id/btn_draworder" />
+
+    <Button
+        android:id="@+id/btn_propertyadvanced"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="属性动画 Property Animation（进阶篇）"
+        app:layout_constraintEnd_toEndOf="@+id/btn_property"
+        app:layout_constraintStart_toStartOf="@+id/btn_property"
+        app:layout_constraintTop_toBottomOf="@+id/btn_property" />
+
+    <Button
+        android:id="@+id/btn_hardware"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="硬件加速"
+        app:layout_constraintEnd_toEndOf="@+id/btn_propertyadvanced"
+        app:layout_constraintStart_toStartOf="@+id/btn_propertyadvanced"
+        app:layout_constraintTop_toBottomOf="@+id/btn_propertyadvanced" />
+
+</android.support.constraint.ConstraintLayout>
