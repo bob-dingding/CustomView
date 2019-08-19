@@ -45,10 +45,16 @@ public class PaintActivity extends AppCompatActivity implements View.OnClickList
                 startActivity(intent);
                 break;
             case R.id.btn_effect:
+                Intent effectIntent =new Intent(PaintActivity.this,ColorActivity.class);
+                startActivity(effectIntent);
                 break;
             case R.id.btn_drawText:
+                Intent  drawTextIntent =new Intent(PaintActivity.this,DrawTextActivity.class);
+                startActivity(drawTextIntent);
                 break;
             case R.id.btn_init:
+                Intent initIntent =new Intent(PaintActivity.this,InitActivity.class);
+                startActivity(initIntent);
                 break;
         }
     }

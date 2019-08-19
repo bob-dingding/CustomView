@@ -27,9 +27,13 @@
         <activity android:name=".drawbase.DrawPathActivity"/>
         <!--Paint详解-->
         <activity android:name=".paint.PaintActivity"/>
-        <!--paint详解之颜色 -->
+        <!--paint详解之颜色和效果 -->
         <activity android:name=".paint.ColorActivity"
             android:hardwareAccelerated="false"/>
+        <!--paint详解之drawText() 相关 -->
+        <activity android:name=".paint.DrawTextActivity"/>
+        <!--paint详解之初始化类 -->
+        <activity android:name=".paint.InitActivity"/>
     </application>
 
 </manifest>

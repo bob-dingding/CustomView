@@ -19,7 +19,7 @@ public class ColorActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_color);
-        composeShader=findViewById(R.id.composeshader);
-        composeShader.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+        //composeShader=findViewById(R.id.composeshader);
+        //composeShader.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
     }
 }

@@ -1,94 +1,259 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <com.hxzk.customview.paint.widget.PaintBaseColorView
-        android:id="@+id/pathsetcolor"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="6dp"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <com.hxzk.customview.paint.widget.PaintColorByShader_LinearGradient
-        android:id="@+id/shadercolor"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="6dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pathsetcolor" />
-    <com.hxzk.customview.paint.widget.PaintColorByShadert_RadialGradient
-        android:id="@+id/radialgradient"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="6dp"
-        app:layout_constraintLeft_toRightOf="@id/shadercolor"
-        app:layout_constraintTop_toBottomOf="@id/pathsetcolor" />
-    <com.hxzk.customview.paint.widget.PaintColorByShadert_SweepGradient
-        android:id="@+id/sweepGradient"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="6dp"
-        app:layout_constraintLeft_toRightOf="@id/radialgradient"
-        app:layout_constraintTop_toBottomOf="@id/pathsetcolor" />
-    <com.hxzk.customview.paint.widget.PaintColorByShadert_BitmapShader
-        android:id="@+id/bitmapShader"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="6dp"
-        app:layout_constraintLeft_toRightOf="@id/sweepGradient"
-        app:layout_constraintTop_toBottomOf="@id/pathsetcolor" />
-    <com.hxzk.customview.paint.widget.PaintColorByShadert_ComposeShader
-        android:id="@+id/composeshader"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/shadercolor"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
-   />
-    <com.hxzk.customview.drawbase.widget.Canvas.drawXXX.DrawBitmapView
-        android:id="@+id/drawbitmap"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/composeshader"
-        />
-    <com.hxzk.customview.paint.widget.PaintColroByColorFilter_LightingColorFilter
-        android:id="@+id/lightingcolorfilter"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        app:layout_constraintStart_toEndOf="@id/drawbitmap"
-        app:layout_constraintTop_toBottomOf="@id/composeshader"
-        />
-    <com.hxzk.customview.paint.widget.PaintColroByColorFilter_PorterDuffColorFilter
-        android:id="@+id/porterduffcolorfilter"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        app:layout_constraintStart_toEndOf="@id/lightingcolorfilter"
-        app:layout_constraintTop_toBottomOf="@id/composeshader"
-        />
-    <com.hxzk.customview.paint.widget.PaintColroByColorFilter_ColorMatrixColorFilter
-        android:id="@+id/colormatrixcolorfilter"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        app:layout_constraintStart_toEndOf="@id/porterduffcolorfilter"
-        app:layout_constraintTop_toBottomOf="@id/composeshader"
-        />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+                <com.hxzk.customview.paint.widget.PaintBaseColorView
+                    android:id="@+id/pathsetcolor"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.hxzk.customview.paint.widget.PaintColorByShader_LinearGradient
+                    android:id="@+id/shadercolor"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/pathsetcolor" />
+
+                <com.hxzk.customview.paint.widget.PaintColorByShadert_RadialGradient
+                    android:id="@+id/radialgradient"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    app:layout_constraintLeft_toRightOf="@id/shadercolor"
+                    app:layout_constraintTop_toBottomOf="@id/pathsetcolor" />
+
+                <com.hxzk.customview.paint.widget.PaintColorByShadert_SweepGradient
+                    android:id="@+id/sweepGradient"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    app:layout_constraintLeft_toRightOf="@id/radialgradient"
+                    app:layout_constraintTop_toBottomOf="@id/pathsetcolor" />
+
+                <com.hxzk.customview.paint.widget.PaintColorByShadert_BitmapShader
+                    android:id="@+id/bitmapShader"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    app:layout_constraintLeft_toRightOf="@id/sweepGradient"
+                    app:layout_constraintTop_toBottomOf="@id/pathsetcolor" />
+
+                <com.hxzk.customview.paint.widget.PaintColorByShadert_ComposeShader
+                    android:id="@+id/composeshader"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/shadercolor"
+
+                    />
 
 
+                <com.hxzk.customview.paint.widget.PaintVieTwo
+                    android:id="@+id/paintViewd"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    app:layout_constraintStart_toEndOf="@id/composeshader"
+                    app:layout_constraintTop_toBottomOf="@id/shadercolor" />
+
+
+                <com.hxzk.customview.paint.widget.setPathEffect
+                    android:id="@+id/setPathEffect"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintStart_toEndOf="@+id/paintViewd"
+                    app:layout_constraintTop_toBottomOf="@id/shadercolor"
+
+                    />
+
+                <com.hxzk.customview.drawbase.widget.Canvas.drawXXX.DrawBitmapView
+                    android:id="@+id/drawbitmap"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/composeshader" />
+
+                <com.hxzk.customview.paint.widget.PaintColroByColorFilter_LightingColorFilter
+                    android:id="@+id/lightingcolorfilter"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintStart_toEndOf="@id/drawbitmap"
+                    app:layout_constraintTop_toBottomOf="@id/composeshader" />
+
+                <com.hxzk.customview.paint.widget.PaintColroByColorFilter_PorterDuffColorFilter
+                    android:id="@+id/porterduffcolorfilter"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintStart_toEndOf="@id/lightingcolorfilter"
+                    app:layout_constraintTop_toBottomOf="@id/composeshader" />
+
+                <com.hxzk.customview.paint.widget.PaintColroByColorFilter_ColorMatrixColorFilter
+                    android:id="@+id/colormatrixcolorfilter"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintStart_toEndOf="@id/porterduffcolorfilter"
+                    app:layout_constraintTop_toBottomOf="@id/composeshader" />
+
+                <com.hxzk.customview.paint.widget.setXfermode.Xfermode_PorterDuffXfermode
+                    android:id="@+id/Xfermode_PorterDuffXfermode"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/colormatrixcolorfilter" />
+
+
+                <com.hxzk.customview.paint.widget.PaintView
+                    android:id="@+id/paintView"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    app:layout_constraintStart_toEndOf="@id/Xfermode_PorterDuffXfermode"
+                    app:layout_constraintTop_toBottomOf="@id/colormatrixcolorfilter" />
+
+                <com.hxzk.customview.paint.widget.PaintVieTwo
+                    android:id="@+id/paintViewTwo"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    app:layout_constraintStart_toEndOf="@id/paintView"
+                    app:layout_constraintTop_toBottomOf="@id/colormatrixcolorfilter" />
+
+                <com.hxzk.customview.paint.widget.setDitherAndsetFilterBitmap
+                    android:id="@+id/setDitherAndsetFilterBitmap"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    app:layout_constraintStart_toEndOf="@+id/paintViewTwo"
+                    app:layout_constraintTop_toBottomOf="@id/colormatrixcolorfilter" />
+
+                <com.hxzk.customview.paint.widget.setDitherAndsetFilterBitmapTwo
+                    android:id="@+id/setDitherAndsetFilterBitmapTwo"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    app:layout_constraintStart_toEndOf="@id/setDitherAndsetFilterBitmap"
+                    app:layout_constraintTop_toBottomOf="@id/colormatrixcolorfilter" />
+
+                <com.hxzk.customview.paint.widget.DrawLines
+                    android:id="@+id/drawlines"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/setDitherAndsetFilterBitmapTwo" />
+
+                <com.hxzk.customview.paint.widget.CornerPathEffectView
+                    android:id="@+id/cornerpatheffectview"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintLeft_toRightOf="@id/drawlines"
+                    app:layout_constraintTop_toBottomOf="@id/setDitherAndsetFilterBitmapTwo" />
+
+                <com.hxzk.customview.paint.widget.DiscretePathEffect
+                    android:id="@+id/discretepatheffect"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintLeft_toRightOf="@id/cornerpatheffectview"
+                    app:layout_constraintTop_toBottomOf="@id/setDitherAndsetFilterBitmapTwo" />
+
+
+                <com.hxzk.customview.paint.widget.PathDashPathEffect
+                    android:id="@+id/pathdeshpatheffect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/discretepatheffect" />
+
+                <com.hxzk.customview.paint.widget.DashPathEffect
+                    android:id="@+id/dashpatheffect"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/pathdeshpatheffect" />
+
+                <com.hxzk.customview.paint.widget.SumPathEffectView
+                    android:id="@+id/sumpatheffectview"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintLeft_toRightOf="@id/dashpatheffect"
+                    app:layout_constraintTop_toBottomOf="@id/pathdeshpatheffect" />
+
+                <com.hxzk.customview.paint.widget.ComposePathEffectView
+                    android:id="@+id/composepatheffectview"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintLeft_toRightOf="@id/sumpatheffectview"
+                    app:layout_constraintTop_toBottomOf="@id/pathdeshpatheffect" />
+
+
+                <com.hxzk.customview.paint.widget.ShadowLayerView
+                    android:id="@+id/shadowlayerview"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/composepatheffectview" />
+
+                <com.hxzk.customview.drawbase.widget.Canvas.drawXXX.DrawBitmapView
+                    android:id="@+id/drawbitmaptwo"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintLeft_toRightOf="@id/shadowlayerview"
+                    app:layout_constraintTop_toBottomOf="@id/composepatheffectview" />
+
+                <com.hxzk.customview.paint.widget.BlurMaskFilterView
+                    android:id="@+id/blurmarkfilter"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintLeft_toRightOf="@id/drawbitmaptwo"
+                    app:layout_constraintTop_toBottomOf="@id/composepatheffectview" />
+
+
+                <com.hxzk.customview.paint.widget.EmbossMaskFilterView
+                    android:id="@+id/embossmaskfilterview"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintLeft_toRightOf="@id/blurmarkfilter"
+                    app:layout_constraintTop_toBottomOf="@id/composepatheffectview" />
+
+
+
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>

@@ -41,7 +41,7 @@ public class DrawBitmapView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.timg);
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.gaoxiao);
         // left 和 top 是要把 bitmap 绘制到的位置坐标
         canvas.drawBitmap(bitmap,50,50,paint);
     }

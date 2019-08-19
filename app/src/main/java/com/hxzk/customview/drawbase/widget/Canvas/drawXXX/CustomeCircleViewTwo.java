@@ -10,9 +10,6 @@ import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.hxzk.customview.R;
-
-
 /**
  * 作者：created by ${zjt} on 2019/8/8
  * 描述:
