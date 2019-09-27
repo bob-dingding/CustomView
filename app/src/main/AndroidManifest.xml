@@ -34,6 +34,8 @@
         <activity android:name=".paint.DrawTextActivity"/>
         <!--paint详解之初始化类 -->
         <activity android:name=".paint.InitActivity"/>
+        <!-- drawtext文字的绘制 -->
+        <activity android:name=".drawtext.DrawTextActivity"/>
     </application>
 
 </manifest>

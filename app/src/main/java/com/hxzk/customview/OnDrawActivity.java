@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.hxzk.customview.drawbase.DrawBaseActivity;
+import com.hxzk.customview.drawtext.DrawTextActivity;
 import com.hxzk.customview.paint.PaintActivity;
 
 /**
@@ -60,6 +61,8 @@ public class OnDrawActivity extends AppCompatActivity implements View.OnClickLis
                 startActivity(paint);
                 break;
             case R.id.btn_drawtext:
+                Intent draw =new Intent(OnDrawActivity.this, DrawTextActivity.class);
+                startActivity(draw);
                 break;
             case R.id.btn_clipAndmatrix:
                 break;
