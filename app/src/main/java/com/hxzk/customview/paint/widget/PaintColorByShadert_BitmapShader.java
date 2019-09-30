@@ -43,7 +43,7 @@ public class PaintColorByShadert_BitmapShader extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher);
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.shinvtu);
 //        bitmap：用来做模板的 Bitmap 对象
 //        tileX：横向的 TileMode
 //        tileY：纵向的 TileMode。

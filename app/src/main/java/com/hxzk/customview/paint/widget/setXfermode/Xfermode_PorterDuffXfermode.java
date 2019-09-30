@@ -4,7 +4,6 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
@@ -52,8 +51,8 @@ public class Xfermode_PorterDuffXfermode extends View {
 
         Xfermode xfermode = new PorterDuffXfermode(PorterDuff.Mode.DST_IN);
 
-        Bitmap rectBitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher);
-        Bitmap circleBitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher_round);
+        Bitmap rectBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.shinvtu);
+        Bitmap circleBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.shinvtu);
         //画方
         canvas.drawBitmap(rectBitmap, 0, 0, paint);
         //canvas.drawRect(0,50,500,500,paint);

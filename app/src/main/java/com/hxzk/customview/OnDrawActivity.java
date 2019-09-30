@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.hxzk.customview.canvas.CanvasActivity;
 import com.hxzk.customview.drawbase.DrawBaseActivity;
 import com.hxzk.customview.drawtext.DrawTextActivity;
 import com.hxzk.customview.paint.PaintActivity;
@@ -65,6 +66,8 @@ public class OnDrawActivity extends AppCompatActivity implements View.OnClickLis
                 startActivity(draw);
                 break;
             case R.id.btn_clipAndmatrix:
+                Intent canvas =new Intent(OnDrawActivity.this, CanvasActivity.class);
+                startActivity(canvas);
                 break;
             case R.id.btn_property:
                 break;

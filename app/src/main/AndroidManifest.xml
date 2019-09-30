@@ -36,6 +36,8 @@
         <activity android:name=".paint.InitActivity"/>
         <!-- drawtext文字的绘制 -->
         <activity android:name=".drawtext.DrawTextActivity"/>
+        <!--canvas对绘制的辅助 -->
+        <activity android:name=".canvas.CanvasActivity"/>
     </application>
 
 </manifest>
