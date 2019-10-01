@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,8 +11,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,8 +30,7 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="25sp"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -41,22 +38,21 @@
                 android:layout_height="wrap_content"
                 android:text="范围裁切有两个方法： clipRect() 和 clipPath()。裁切方法之后的绘制代码，都会被限制在裁切范围内,记得要加上 Canvas.save() 和 Canvas.restore() 来及时恢复绘制范围,不然后面的继续的裁剪只能在此基础上裁剪了"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/textView1"
-                />
-
+                app:layout_constraintTop_toBottomOf="@id/textView1" />
+            <!-- 通过clipRect()进行范围裁切 -->
             <com.hxzk.customview.canvas.weigth.ClipRectView
                 android:id="@+id/clipRectView"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/textView2"/>
-
+                app:layout_constraintTop_toBottomOf="@id/textView2" />
+            <!-- 通过clipRect()进行范围裁切 -->
             <com.hxzk.customview.canvas.weigth.ClipPathView
                 android:id="@+id/clipPathView"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/clipRectView"/>
+                app:layout_constraintTop_toBottomOf="@id/clipRectView" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -64,32 +60,108 @@
                 android:layout_height="wrap_content"
                 android:text="几何变换的使用大概分为三类/n 使用 Canvas 来做常见的二维变换；/n使用 Matrix 来做常见和不常见的二维变换./n使用 Camera 来做三维变换。"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/clipPathView"/>
+                app:layout_constraintTop_toBottomOf="@id/clipPathView" />
+            <!-- 原图，用作参考 -->
             <ImageView
                 android:id="@+id/imageview1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/gaoxiao"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/textView3"/>
+                app:layout_constraintTop_toBottomOf="@id/textView3" />
+            <!--canvas辅助功能之平移-->
             <com.hxzk.customview.canvas.weigth.TranslateView
                 android:id="@+id/transition"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/imageview1"/>
+                app:layout_constraintTop_toBottomOf="@id/imageview1" />
+            <!--canvas辅助功能之旋转-->
             <com.hxzk.customview.canvas.weigth.Canvas_Rotate
                 android:id="@+id/rotate"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/transition"/>
+                app:layout_constraintTop_toBottomOf="@id/transition" />
+            <!--canvas辅助功能之缩放-->
             <com.hxzk.customview.canvas.weigth.Canvas_ScaleView
                 android:id="@+id/scaleview"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/rotate"/>
+                app:layout_constraintTop_toBottomOf="@id/rotate" />
+            <!--canvas辅助功错切-->
+            <com.hxzk.customview.canvas.weigth.Canvas_Skew
+                android:id="@+id/shew"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/scaleview" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="使用 Matrix 来做变换:Matrix常见变换方式1.创建 Matrix 对象；
+2.调用 Matrix 的 pre/postTranslate/Rotate/Scale/Skew() 方法来设置几何变换；
+3.使用 Canvas.setMatrix(matrix) 或 Canvas.concat(matrix) 来把几何变换应用到 Canvas。区别是：Canvas.setMatrix(matrix)：用 Matrix 直接替换 Canvas 当前的变换矩阵，即抛弃 Canvas 当前的变换，改用 Matrix 的变换（注：根据下面评论里以及我在微信公众号中收到的反馈，不同的系统中  setMatrix(matrix) 的行为可能不一致，所以还是尽量用 concat(matrix) 吧）；
+Canvas.concat(matrix)：用 Canvas 当前的变换矩阵和 Matrix 相乘，即基于 Canvas 当前的变换，叠加上 Matrix 中的变换"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/shew" />
+
+
+            <!-- Canvas辅助Matrix常见效果 -->
+            <com.hxzk.customview.canvas.weigth.Canvas_Matrix
+                android:id="@+id/matrix"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView4" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Matrix 的自定义变换使用的是 setPolyToPoly() 方法,poly 就是「多」的意思。setPolyToPoly() 的作用是通过多点的映射的方式来直接设置变换。「多点映射」的意思就是把指定的点移动到给出的位置，从而发生形变。例如：(0, 0) -> (100, 100) 表示把 (0, 0) 位置的像素移动到 (100, 100) 的位置，这个是单点的映射，单点映射可以实现平移。而多点的映射，就可以让绘制内容任意地扭曲"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/matrix" />
+            <!-- Canvas辅助Matrix实现自定义效果 -->
+            <com.hxzk.customview.canvas.weigth.Canvas_CustomMatrix
+                android:id="@+id/customMatrix"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView5" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:text="使用 Camera 来做三维变换,Camera 的三维变换有三类：旋转、平移、移动相机。"
+                android:digits="@+id/textView6"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/customMatrix" />
+            <!-- Camera.rotate*() 三维旋转 -->
+            <com.hxzk.customview.canvas.weigth.Canvas_CameraRotate
+                android:id="@+id/cameraRotate"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView6"/>
+            <!-- Camera.rotate*() 三维旋转然后平移对称 -->
+            <com.hxzk.customview.canvas.weigth.Canvas_CameraTranslate
+                android:id="@+id/cameraTrans"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cameraRotate"/>
+            <!--设置虚拟相机的位置,单位是英寸-->
+            <com.hxzk.customview.canvas.weigth.Canvas_CameraLocation
+                android:id="@+id/cameraLocation"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cameraTrans"/>
         </LinearLayout>
     </ScrollView>
 </android.support.constraint.ConstraintLayout>
