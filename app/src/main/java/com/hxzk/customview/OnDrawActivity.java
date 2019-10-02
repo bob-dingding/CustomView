@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.hxzk.customview.canvas.CanvasActivity;
 import com.hxzk.customview.drawbase.DrawBaseActivity;
+import com.hxzk.customview.draworder.DrawOrderActivity;
 import com.hxzk.customview.drawtext.DrawTextActivity;
 import com.hxzk.customview.paint.PaintActivity;
 
@@ -72,6 +73,9 @@ public class OnDrawActivity extends AppCompatActivity implements View.OnClickLis
             case R.id.btn_property:
                 break;
             case R.id.btn_draworder:
+                Intent drawOrder =new Intent(OnDrawActivity.this, DrawOrderActivity
+                        .class);
+                startActivity(drawOrder);
                 break;
             case R.id.btn_propertyadvanced:
                 break;

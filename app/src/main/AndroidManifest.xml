@@ -44,6 +44,8 @@
         <activity android:name=".drawtext.DrawTextActivity"/>
         <!--canvas对绘制的辅助 -->
         <activity android:name=".canvas.CanvasActivity"/>
+        <!--绘制顺序-->
+        <activity android:name=".draworder.DrawOrderActivity"/>
     </application>
 
 </manifest>
