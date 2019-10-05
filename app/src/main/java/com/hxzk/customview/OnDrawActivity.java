@@ -12,6 +12,7 @@ import com.hxzk.customview.drawbase.DrawBaseActivity;
 import com.hxzk.customview.draworder.DrawOrderActivity;
 import com.hxzk.customview.drawtext.DrawTextActivity;
 import com.hxzk.customview.paint.PaintActivity;
+import com.hxzk.customview.property.PropertyAnimationUpActivity;
 
 /**
  * 作者：created by ${zjt} on 2019/8/7
@@ -36,8 +37,8 @@ public class OnDrawActivity extends AppCompatActivity implements View.OnClickLis
         btn_drawtext=findViewById(R.id.btn_drawtext);
         btn_clipAndmatrix=findViewById(R.id.btn_clipAndmatrix);
         btn_draworder=findViewById(R.id.btn_draworder);
-        btn_property=findViewById(R.id.btn_property);
-        btn_propertyadvanced=findViewById(R.id.btn_propertyadvanced);
+        btn_property=findViewById(R.id.btn_propertyUp);
+        btn_propertyadvanced=findViewById(R.id.btn_propertyDown);
         btn_hardware=findViewById(R.id.btn_hardware);
 
 
@@ -70,14 +71,17 @@ public class OnDrawActivity extends AppCompatActivity implements View.OnClickLis
                 Intent canvas =new Intent(OnDrawActivity.this, CanvasActivity.class);
                 startActivity(canvas);
                 break;
-            case R.id.btn_property:
+            case R.id.btn_propertyUp:
+                Intent propertyUp =new Intent(OnDrawActivity.this, PropertyAnimationUpActivity
+                        .class);
+                startActivity(propertyUp);
                 break;
             case R.id.btn_draworder:
                 Intent drawOrder =new Intent(OnDrawActivity.this, DrawOrderActivity
                         .class);
                 startActivity(drawOrder);
                 break;
-            case R.id.btn_propertyadvanced:
+            case R.id.btn_propertyDown:
                 break;
             case R.id.btn_hardware:
                 break;

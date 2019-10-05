@@ -46,6 +46,8 @@
         <activity android:name=".canvas.CanvasActivity"/>
         <!--绘制顺序-->
         <activity android:name=".draworder.DrawOrderActivity"/>
+        <!-- 属性动画上篇 -->
+        <activity android:name=".property.PropertyAnimationUpActivity"/>
     </application>
 
 </manifest>

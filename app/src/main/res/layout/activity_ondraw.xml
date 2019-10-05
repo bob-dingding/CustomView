@@ -59,7 +59,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_clipAndmatrix" />
 
     <Button
-        android:id="@+id/btn_property"
+        android:id="@+id/btn_propertyUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -69,14 +69,14 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_draworder" />
 
     <Button
-        android:id="@+id/btn_propertyadvanced"
+        android:id="@+id/btn_propertyDown"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="属性动画 Property Animation（进阶篇）"
-        app:layout_constraintEnd_toEndOf="@+id/btn_property"
-        app:layout_constraintStart_toStartOf="@+id/btn_property"
-        app:layout_constraintTop_toBottomOf="@+id/btn_property" />
+        app:layout_constraintEnd_toEndOf="@+id/btn_propertyUp"
+        app:layout_constraintStart_toStartOf="@+id/btn_propertyUp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_propertyUp" />
 
     <Button
         android:id="@+id/btn_hardware"
@@ -84,8 +84,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="硬件加速"
-        app:layout_constraintEnd_toEndOf="@+id/btn_propertyadvanced"
-        app:layout_constraintStart_toStartOf="@+id/btn_propertyadvanced"
-        app:layout_constraintTop_toBottomOf="@+id/btn_propertyadvanced" />
+        app:layout_constraintEnd_toEndOf="@+id/btn_propertyDown"
+        app:layout_constraintStart_toStartOf="@+id/btn_propertyDown"
+        app:layout_constraintTop_toBottomOf="@+id/btn_propertyDown" />
 
 </android.support.constraint.ConstraintLayout>
