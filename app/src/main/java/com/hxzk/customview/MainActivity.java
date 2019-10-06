@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.button2:
             break;
             case R.id.button3:
+                Intent touchFeedBack  =new Intent(MainActivity.this,TouchFeedBackActivity.class);
+                startActivity(touchFeedBack);
             break;
         }
     }

@@ -11,6 +11,7 @@ import com.hxzk.customview.canvas.CanvasActivity;
 import com.hxzk.customview.drawbase.DrawBaseActivity;
 import com.hxzk.customview.draworder.DrawOrderActivity;
 import com.hxzk.customview.drawtext.DrawTextActivity;
+import com.hxzk.customview.hardward.HardwardActivity;
 import com.hxzk.customview.paint.PaintActivity;
 import com.hxzk.customview.property.PropertyAnimationDownActivity;
 import com.hxzk.customview.property.PropertyAnimationUpActivity;
@@ -88,6 +89,9 @@ public class OnDrawActivity extends AppCompatActivity implements View.OnClickLis
                 startActivity(propertyDown);
                 break;
             case R.id.btn_hardware:
+                Intent hardward =new Intent(OnDrawActivity.this, HardwardActivity
+                        .class);
+                startActivity(hardward);
                 break;
         }
     }

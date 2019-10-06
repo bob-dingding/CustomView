@@ -50,6 +50,10 @@
         <activity android:name=".property.PropertyAnimationUpActivity"/>
         <!-- 属性动画下篇 -->
         <activity android:name=".property.PropertyAnimationDownActivity"/>
+        <!-- 硬件加速 -->
+        <activity android:name=".hardward.HardwardActivity"/>
+        <!-- 触摸反馈 -->
+        <activity android:name=".TouchFeedBackActivity"/>
     </application>
 
 </manifest>
