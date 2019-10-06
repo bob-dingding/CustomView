@@ -33,15 +33,32 @@ public class CustomeCircleViewTwo extends View {
         super(context, attrs, defStyleAttr, defStyleRes);
     }
 
+     int color =0;
+    // 创建 getter 方法
+    public int getColor() {
+        return color;
+    }
 
-    Paint paint =new Paint();
+    // 创建 setter 方法
+    public void setColor(int progress) {
+        this.color = progress;
+        invalidate();
+    }
+
+
+
+
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        //给画布设置颜色可以理解为背景色
-        //canvas.drawColor(Color.RED);
-        paint.setColor(Color.RED);
+        Paint paint =new Paint();
+        if(color != 0){
+            paint.setColor(color);
+        }else{
+            paint.setColor(Color.RED);
+        }
+
         //注意Paint参数不能传空
-        canvas.drawCircle(150,150,50,paint);
+        canvas.drawCircle(150,150,100,paint);
     }
 }

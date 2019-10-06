@@ -12,6 +12,7 @@ import com.hxzk.customview.drawbase.DrawBaseActivity;
 import com.hxzk.customview.draworder.DrawOrderActivity;
 import com.hxzk.customview.drawtext.DrawTextActivity;
 import com.hxzk.customview.paint.PaintActivity;
+import com.hxzk.customview.property.PropertyAnimationDownActivity;
 import com.hxzk.customview.property.PropertyAnimationUpActivity;
 
 /**
@@ -82,6 +83,9 @@ public class OnDrawActivity extends AppCompatActivity implements View.OnClickLis
                 startActivity(drawOrder);
                 break;
             case R.id.btn_propertyDown:
+                Intent propertyDown =new Intent(OnDrawActivity.this, PropertyAnimationDownActivity
+                        .class);
+                startActivity(propertyDown);
                 break;
             case R.id.btn_hardware:
                 break;

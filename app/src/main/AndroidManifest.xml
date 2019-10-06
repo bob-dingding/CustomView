@@ -48,6 +48,8 @@
         <activity android:name=".draworder.DrawOrderActivity"/>
         <!-- 属性动画上篇 -->
         <activity android:name=".property.PropertyAnimationUpActivity"/>
+        <!-- 属性动画下篇 -->
+        <activity android:name=".property.PropertyAnimationDownActivity"/>
     </application>
 
 </manifest>
