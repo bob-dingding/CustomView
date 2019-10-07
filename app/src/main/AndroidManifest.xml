@@ -54,6 +54,14 @@
         <activity android:name=".hardward.HardwardActivity"/>
         <!-- 触摸反馈 -->
         <activity android:name=".TouchFeedBackActivity"/>
+        <!--自定义View-布局-->
+        <activity android:name=".LayoutActivity"/>
+        <!--布局的基础-->
+        <activity android:name=".layout.LayoutBaseActivity"/>
+        <!--全新定义 View 的尺寸-->
+        <activity android:name=".layout.ViewSizeActivity"/>
+        <!--Layout 的内部布局-->
+        <activity android:name=".layout.InnerLayoutActivity"/>
     </application>
 
 </manifest>

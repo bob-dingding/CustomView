@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_layoutbase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="8dp"
+        android:text="布局基础"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.543"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_viewSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text=" 全新定义 View 的尺寸"
+        app:layout_constraintEnd_toEndOf="@+id/btn_layoutbase"
+        app:layout_constraintStart_toStartOf="@+id/btn_layoutbase"
+        app:layout_constraintTop_toBottomOf="@+id/btn_layoutbase"/>
+
+    <Button
+        android:id="@+id/btn_innerLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="116dp"
+        android:text="定制 Layout 的内部布局"
+        app:layout_constraintEnd_toEndOf="@+id/btn_viewSize"
+        app:layout_constraintStart_toStartOf="@+id/btn_viewSize"
+        app:layout_constraintTop_toBottomOf="@+id/btn_viewSize"/>
+</android.support.constraint.ConstraintLayout>

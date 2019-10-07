@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Layout;
 import android.view.View;
 import android.widget.Button;
 
@@ -42,6 +43,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(draw);
             break;
             case R.id.button2:
+				Intent layout  =new Intent(MainActivity.this, LayoutActivity.class);
+				startActivity(layout);
             break;
             case R.id.button3:
                 Intent touchFeedBack  =new Intent(MainActivity.this,TouchFeedBackActivity.class);

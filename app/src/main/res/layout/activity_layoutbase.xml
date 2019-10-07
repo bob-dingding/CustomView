@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+ <ScrollView
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     app:layout_constraintTop_toTopOf="parent"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent">
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:orientation="vertical">
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textIsSelectable="true"
+             android:text="本期视频地址：https://www.bilibili.com/video/av16064661/ "/>
+         <TextView
+             android:id="@+id/texxtView1"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Android的布局过程包含两部分：测量过程和和布局过程，首先界面从最顶级的根View向下递归的测量出每一级，每一个子View的尺寸和位置。然后依然从上到下依次赋值给子View.
+布局过程完成，接下来是绘制，也就是每个view根据位置和尺寸进行自我绘制。"
+             app:layout_constraintTop_toTopOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"/>
+
+         <TextView
+             android:id="@+id/textView2"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="20dp"
+             android:text="布局过程的含义:布局过程，就是程序在运行时利用布局文件的代码来计算出实际尺寸的过程"
+             app:layout_constraintTop_toBottomOf="@id/texxtView1"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"/>
+
+         <TextView
+             android:id="@+id/textView3"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="20dp"
+             android:text="布局过程的工作内容:两个阶段：测量阶段和布局阶段。
+测量阶段：从上到下递归地调用每个 View 或者 ViewGroup 的 measure() 方法，测量他们的尺寸并计算它们的位置； 布局阶段：从上到下递归地调用每个 View 或者 ViewGroup 的 layout() 方法，把测得的它们的尺寸和位置赋值给它们。"
+             app:layout_constraintTop_toBottomOf="@id/textView2"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"/>
+
+         <TextView
+             android:id="@+id/textView4"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="20dp"
+             android:text="View 或 ViewGroup 的布局过程:
+\n\n1.测量阶段，measure() 方法被父 View 调用，在 measure() 中做一些准备和优化工作后，调用  onMeasure() 来进行实际的自我测量。 onMeasure() 做的事，View 和 ViewGroup 不一样：
+\n1.1:View：View 在 onMeasure() 中会计算出自己的尺寸然后保存；
+\n1.2:ViewGroup：ViewGroup 在 onMeasure() 中会调用所有子 View 的 measure() 让它们进行自我测量，并根据子 View 计算出的期望尺寸来计算出它们的实际尺寸和位置（实际上 99.99% 的父 View 都会使用子 View 给出的期望尺寸来作为实际尺寸，原因在下期或下下期会讲到）然后保存。同时，它也会根据子 View 的尺寸和位置来计算出自己的尺寸然后保存；
+\n\n2布局阶段，layout() 方法被父 View 调用，在 layout() 中它会保存父 View 传进来的自己的位置和尺寸，并且调用 onLayout() 来进行实际的内部布局。onLayout() 做的事， View 和 ViewGroup 也不一样：
+\n2.1:View：由于没有子 View，所以 View 的 onLayout() 什么也不做。
+\n2.2:ViewGroup：ViewGroup 在 onLayout() 中会调用自己的所有子 View 的 layout() 方法，把它们的尺寸和位置传给它们，让它们完成自我的内部布局。"
+             app:layout_constraintTop_toBottomOf="@id/textView3"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"/>
+
+         <TextView
+             android:id="@+id/textView5"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="20dp"
+             android:text="布局过程自定义的方式：三类
+\n1.重写 onMeasure() 来修改已有的 View 的尺寸；
+\n2.重写 onMeasure() 来全新定制自定义 View 的尺寸；
+\n3.重写 onMeasure() 和 onLayout() 来全新定制自定义 ViewGroup 的内部布局
+\n举例第一类重写 onMeasure() 来修改已有的 View 的尺寸的具体做法：
+\n1.重写 onMeasure() 方法，并在里面调用 super.onMeasure()，触发原有的自我测量
+\n2.在 super.onMeasure() 的下面用 getMeasuredWidth() 和 getMeasuredHeight() 来获取到之前的测量结果，并使用自己的算法，根据测量结果计算出新的结果；
+\n3.调用 setMeasuredDimension() 来保存新的结果"/>
+
+     </LinearLayout>
+ </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

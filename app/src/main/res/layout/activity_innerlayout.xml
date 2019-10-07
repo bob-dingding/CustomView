@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textIsSelectable="true"
+                android:text="重写 onMeasure() 和 onLayout() 来定制 Layout 的内部布局。本期推荐内容：https://www.bilibili.com/video/av18330166/"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="定制 Layout 内部布局的方式:
+\n重写 onMeasure() 来计算内部布局
+\n重写 onLayout() 来摆放子 View"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="重写 onMeasure() 的三个步骤:
+\n1.调用每个子 View 的 measure() 来计算子 View 的尺寸
+\n2.计算子 View 的位置并保存子 View 的位置和尺寸
+\n3.计算自己的尺寸并用 setMeasuredDimension() 保存"/>
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
