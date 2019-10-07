@@ -42,13 +42,14 @@
                 android:layout_marginTop="20dp"
                 android:text="计算子 View 尺寸的关键:计算子 View 的尺寸，关键在于 measure() 方法的两个参数——也就是子 View 的两个 MeasureSpec 的计算。
 \n子 View 的 MeasureSpec 的计算方式:
-\n结合开发者的要求（xml 中 layout_ 打头的属性）和自己的可用空间（自己的尺寸上限 - 已用尺寸）
-\n MeasureSpec 中的 mode 而定:EXACTLY / AT_MOST：尺寸上限为 MeasureSpec 中的 size而
+\n1.结合开发者的要求（xml 中 layout_ 打头的属性）和自己的可用空间（自己的尺寸上限 - 已用尺寸）
+\n2.MeasureSpec 中的 mode 而定:EXACTLY / AT_MOST：尺寸上限为 MeasureSpec 中的 size而
 UNSPECIFIED：尺寸无上限"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:text="重写 onLayout() 的方式:在 onLayout() 里调用每个子 View 的 layout() ，让它们保存自己的位置和尺寸"/>
         </LinearLayout>
     </ScrollView>
